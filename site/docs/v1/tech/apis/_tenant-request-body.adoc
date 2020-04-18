@@ -68,9 +68,8 @@ The transaction type that FusionAuth uses when sending these types of events to 
 include::_transaction-types.adoc[]
 
 [field]#tenant.externalIdentifierConfiguration.authorizationGrantIdTimeToLiveInSeconds# [type]#[Integer]# [required]#Required# [since]#Available Since 1.8.0#::
-The time in seconds until a OAuth authorization code in no longer valid to be exchanged for an access token. This is essentially the time allowed between the start
-of an Authorization request during the Authorization code grant and when you request an access token using this authorization code on the Token endpoint.
-
+The time in seconds until a OAuth authorization code in no longer valid to be exchanged for an access token. This is essentially the time allowed between the start of an Authorization request during the Authorization code grant and when you request an access token using this authorization code on the Token endpoint.
++
 Value must be greater than 0 and less than or equal to 600.
 
 [field]#tenant.externalIdentifierConfiguration.changePasswordIdGenerator.length# [type]#[Integer]# [required]#Required# [since]#Available Since 1.8.0#::
