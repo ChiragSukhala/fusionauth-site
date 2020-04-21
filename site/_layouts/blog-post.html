@@ -36,81 +36,71 @@
   </script>
 </head>
 <body>
-{% include _navigation.html %}
-<main class="page">
-  <section>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFGZT3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{% include _header.html gray=true %}
+<main>
+  <section class="white blog">
     <div class="container">
-      <div class="row">
-        <article class="col-12 col-lg-9">
-          <div class="mb-5">
-            <img class="post-image" src="/assets/img/{{ page.image }}" alt="{{ page.description }}"/>
-          </div>
-          <div class="post-body">
-            <h1>{{ page.title }}</h1>
-            <div class="mb-1 mt-2">
-              <span class="text-secondary text-uppercase">{{ page.date | date_to_string: "ordinal", "US" }}</span>
-              <span class="ml-4 text-secondary text-uppercase">{{ page.author }}</span>
-            </div>
-            <div class="mb-5">
-              <a class="social-share-button" href="#https://www.facebook.com/sharer/sharer.php?u=https://fusionauth.io{{ page.url }}">
+      <div class="row center">
+        <article class="col-xs-12 col-lg-9">
+          <img class="post-image" src="/assets/img/{{ page.image }}" alt="{{ page.description }}"/>
+          <div class="info">
+            <div class="author-date">{{ page.author }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ page.date | date_to_string: "ordinal", "US" }}</div>
+            <div class="social-share-buttons">
+              <a href="#https://www.facebook.com/sharer/sharer.php?u=https://fusionauth.io{{ page.url }}">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a class="social-share-button" href="#http://twitter.com/intent/tweet?via=fusionauth&url=https://fusionauth.io{{ page.url }}">
+              <a href="#http://twitter.com/intent/tweet?via=fusionauth&url=https://fusionauth.io{{ page.url }}">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a class="social-share-button" href="#https://www.linkedin.com/shareArticle?mini=true&url=https://fusionauth.io{{ page.url }}&title={{ page.title | uri_escape }}&source=fusionauth.io">
+              <a href="#https://www.linkedin.com/shareArticle?mini=true&url=https://fusionauth.io{{ page.url }}&title={{ page.title | uri_escape }}&source=fusionauth.io">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
-            <div class="post-body-content">
-              {% if page.markdown == 1 %}
-                {{ content | markdownify }}
-              {% else %}
-                {{ content }}
-              {% endif %}
-            </div>
-            <div class="post-body-comments">
-              <div id="hyvor-talk-view"></div>
-              <script type="text/javascript">
-                var HYVOR_TALK_WEBSITE = 360; // DO NOT CHANGE THIS
-                var HYVOR_TALK_CONFIG = {
-                  url: false,
-                  id: false
-                };
-              </script>
-              <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
-<!--              <div class="just-comments" data-apikey="edc7b4a8-97ce-47ba-9e21-0477407197ef"></div>-->
-<!--              <script async src="https://just-comments.com/w.js"></script>-->
-            </div>
+          </div>
+          <div class="post-body">
+            {% if page.markdown == 1 %}
+              {{ content | markdownify }}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </div>
+          <div class="post-body-comments">
+            <div id="hyvor-talk-view"></div>
+            <script type="text/javascript">
+              var HYVOR_TALK_WEBSITE = 360; // DO NOT CHANGE THIS
+              var HYVOR_TALK_CONFIG = {
+                url: false,
+                id: false
+              };
+            </script>
+            <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
           </div>
         </article>
-        <div class="col-12 col-lg-3">
-          <div class="border p-4 rounded">
-            <h2>Recent Posts</h2>
-            <hr/>
-            <ul class="list-unstyled">
-              {% for post in site.posts limit: 4 %}
-                <li class="my-3"><a href="{{ post.url | replace: '.html', '' }}">{{ post.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="mt-4 mb-4 bg-secondary p-4 text-center text-white">
-            <img class="w-100" src="/assets/img/fusionauth-logo-white-orange.svg" alt="FusionAuth logo">
-            <p class="mt-4 text-light">
+        <aside class="col-xs-0 col-lg-3">
+          <h2>Recent Posts</h2>
+          <ul>
+            {% for post in site.posts limit: 4 %}
+              <li><a href="{{ post.url | replace: '.html', '' }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <h2>Additional Resources</h2>
+          <ul>
+            <li><a href="/learn/expert-advice/authentication/login-authentication-workflows">Authentication Workflows</a></li>
+            <li><a href="/learn/expert-advice/security/guide-to-user-data-security">Guide to User Data Security</a></li>
+            <li><a href="/learn/expert-advice/tokens/revoking-jwts">Revoking JWTs</a></li>
+            <li><a href="/learn/expert-advice/dev-tools/index">Dev Tools</a></li>
+          </ul>
+          <div class="gray card centered">
+            <img src="/assets/img/logo-white.svg" alt="FusionAuth logo">
+            <p>
               FusionAuth provides authentication, authorization, and user management for any app: deploy anywhere, integrate with anything, in minutes.
             </p>
-            <a class="btn btn-lg btn-primary text-uppercase mt-3 mb-4">Get Started for Free</a>
+            <a href="/pricing" class="orange brochure button">GET STARTED</a>
           </div>
-          <div class="border p-4 rounded">
-            <h2>Additional Useful Resources</h2>
-            <hr/>
-            <ul class="list-unstyled">
-              {% for resource in site.data.resources %}
-                <li class="my-3"><a href="{{ resource.url }}">{{ resource.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
+        </aside>
       </div>
     </div>
   </section>
