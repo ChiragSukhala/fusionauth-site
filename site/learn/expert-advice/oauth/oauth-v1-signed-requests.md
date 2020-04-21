@@ -4,7 +4,6 @@ title: OAuth v1 signed requests
 description: Twitter doesn't make it easy to build an OAuth v1 login with Java. Here's how we did it for FusionAuth.
 author: Daniel DeGroff
 categories: oauth
-header_dark: true
 image: advice/login-with-twitter-article.png
 category: OAuth
 date: 2019-11-04

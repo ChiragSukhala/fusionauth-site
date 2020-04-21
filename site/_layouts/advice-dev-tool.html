@@ -53,65 +53,70 @@
   </script>
 </head>
 <body>
-{% include _navigation.html %}
-<main class="bg-light2 pb-5">
-  <section>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFGZT3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{% include _header.html gray=true %}
+<main>
+  <section class="light-gray blog">
     <div class="container">
-      {% include _advice-nav.html border=false %}
-      <nav class="mt-3" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/learn/expert-advice/">Expert Advice</a></li>
-          <li class="breadcrumb-item"><a href="/learn/expert-advice/{{ page.category | slugify }}">{{ page.category }}</a></li>
-          <li class="breadcrumb-item"><a href="{{ page.url | remove: '.html' }}">{{ page.title }}</a></li>
-        </ol>
-      </nav>
-      <div class="row">
-        <article class="col-12 col-lg-9">
-          <div class="article-body bg-white p-4 rounded shadow">
-            <h1><i class="fad fa-{{ page.icon }} mr-2"></i> {{ page.title }}</h1>
-            <div class="mb-2 mt-2">
-              <span class="text-secondary">Tool written by {{ page.author }}</span>
-            </div>
-            <div class="mb-5">
-              <div class="rw-ui-container" data-title="{{ page.url | replace: '.html', '' }}"></div>
-            </div>
-            <div class="article-body-content">
-              {% if page.markdown == 1 %}
-                {{ content | markdownify }}
-              {% else %}
-                {{ content }}
-              {% endif %}
+      <div class="row center">
+        <article class="col-xs-12 col-lg-9 white card">
+          <h1>{{ page.title }}</h1>
+          <div class="rw-ui-container" data-title="{{ page.url | replace: '.html', '' }}"></div>
+          <div class="info">
+            <div class="author-date">Tool written by {{ page.author }}</div>
+            <div class="social-share-buttons">
+              <a href="#https://www.facebook.com/sharer/sharer.php?u=https://fusionauth.io{{ page.url }}">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#http://twitter.com/intent/tweet?via=fusionauth&url=https://fusionauth.io{{ page.url }}">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#https://www.linkedin.com/shareArticle?mini=true&url=https://fusionauth.io{{ page.url }}&title={{ page.title | uri_escape }}&source=fusionauth.io">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
-          <div class="article-footer-block mt-6 mb-6 text-center">
-            <hr>
-            <div class="article-rating mt-5 mb-5">
+          <div class="post-body">
+            {% if page.markdown == 1 %}
+            {{ content | markdownify }}
+            {% else %}
+            {{ content }}
+            {% endif %}
+          </div>
+          <div class="article-rating-block">
+            <div class="article-rating">
               <p>
                 Was this dev tool awesome? Click a star to rate it.
               </p>
               <div class="rw-ui-container" data-title="{{ page.url | replace: '.html', '' }}"></div>
             </div>
-            <hr>
-            <div class="article-contribute mt-5 mb-5">
-              <p>
-                Have an idea for a great dev tool? Submit a PR to our GitHub project at:
-                <br/>
-                <a href="https://github.com/fusionAuth/fusionauth-site">https://github.com/fusionAuth/fusionauth-site</a>
-              </p>
-            </div>
-            <hr>
+          </div>
+          <div class="article-contribute">
+            <p class="centered">
+              Have an idea for a great dev tool? Submit a PR to our GitHub project at:
+              <br/>
+              <a href="https://github.com/fusionAuth/fusionauth-site">https://github.com/fusionAuth/fusionauth-site</a>
+            </p>
           </div>
         </article>
-        <div class="col col-lg-3 d-lg-block d-none pl-4">
-          <div class="bg-secondary p-2 rounded text-center text-white">
-            <img class="w-100 mt-2" src="/assets/img/fusionauth-stacked-logo.svg">
-            <p class="mt-4 text-light">
-              Authentication, authorization, and user management for any app: deploy behind your firewall or in the cloud and integrate with anything, in minutes.
+        <aside class="col-xs-0 col-lg-3">
+          <h2>Additional Resources</h2>
+          <ul>
+            <li><a href="/learn/expert-advice/authentication/login-authentication-workflows">Authentication Workflows</a></li>
+            <li><a href="/learn/expert-advice/security/guide-to-user-data-security">Guide to User Data Security</a></li>
+            <li><a href="/learn/expert-advice/tokens/revoking-jwts">Revoking JWTs</a></li>
+            <li><a href="/learn/expert-advice/dev-tools/index">Dev Tools</a></li>
+          </ul>
+          <div class="gray card centered">
+            <img src="/assets/img/logo-white.svg" alt="FusionAuth logo">
+            <p>
+              FusionAuth provides authentication, authorization, and user management for any app: deploy anywhere, integrate with anything, in minutes.
             </p>
-            <a class="btn btn-lg btn-primary text-uppercase mt-3 mb-4 mx-3" href="/download">Get Started for Free</a>
+            <a href="/pricing" class="orange brochure button">GET STARTED</a>
           </div>
-
-        </div>
+        </aside>
       </div>
     </div>
   </section>

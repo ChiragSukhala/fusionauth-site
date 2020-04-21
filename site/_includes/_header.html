@@ -8,7 +8,7 @@
       </header>
       <ul>
         <li class="dropdown">
-          <a href="#">Features <i class="fal fa-angle-down fa-fw"></i></a>
+          <a href="#" class="{% if page.url contains '/features' %}active{% endif %}">Features <i class="fal fa-angle-down fa-fw"></i></a>
           <div class="super-dropdown animate">
             <div class="container">
               <div class="promo animate">
@@ -38,11 +38,11 @@
             </div>
           </div>
         </li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a href="/docs/">Docs</a></li>
-        <li><a href="/download">Downloads</a></li>
+        <li><a href="/pricing" class="{% if page.url contains '/pricing' %}active{% endif %}">Pricing</a></li>
+        <li><a href="/docs/" class="{% if page.url contains '/docs/' %}active{% endif %}">Docs</a></li>
+        <li><a href="/download" class="{% if page.url contains '/download' %}active{% endif %}">Downloads</a></li>
         <li class="dropdown">
-          <a href="#">Resources <i class="fal fa-angle-down fa-fw"></i></a>
+          <a href="#" class="{% if page.url contains '/blog' || page.url contains '/community' || page.url contain '/customers-partners' || page.url contains '/upgrade/' %}active{% endif %}">Resources <i class="fal fa-angle-down fa-fw"></i></a>
           <div class="super-dropdown animate">
             <div class="container">
               <div class="promo animate">
@@ -70,7 +70,7 @@
           </div>
         </li>
         <li class="dropdown">
-          <a href="#">Expert Advice <i class="fal fa-angle-down fa-fw"></i></a>
+          <a href="#" class="{% if page.url contains '/learn' %}active{% endif %}">Expert Advice <i class="fal fa-angle-down fa-fw"></i></a>
           <div class="super-dropdown animate">
             <div class="container">
               <div class="promo animate">

@@ -3,7 +3,6 @@ layout: advice
 title: The Math of Password Hashing Algorithms and Entropy
 description: Long passwords and one-way password hashing are standard strategies used to increase security and protect your user's passwords. Let's take a look at how they work and some new ideas to improve it.
 author: Brian Pontarelli
-header_dark: true
 image: advice/save-a-cpu-article.png
 category: Security
 date: 2019-11-04
