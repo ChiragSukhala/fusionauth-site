@@ -190,4 +190,4 @@ General Data Protection Regulation Text
 * [The Media Agency's Guide To GDPR And EPrivacy](https://adexchanger.com/agencies/media-agencys-guide-gdpr-eprivacy/)
 * [MarTech Today's Guide to GDPR — The General Data Protection Regulation](https://martechtoday.com/guide/gdpr-the-general-data-protection-regulation)
 
-{% include _advice-get-started.html intro="If you are looking for a GDPR compliant solution, FusionAuth has you covered." %}
+{% include _advice-get-started.liquid intro="If you are looking for a GDPR compliant solution, FusionAuth has you covered." %}

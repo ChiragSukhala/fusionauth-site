@@ -2,7 +2,7 @@
 <html lang="en">
 <!--suppress HtmlRequiredTitleElement -->
 <head>
-  {% include _head.html %}
+  {% include _head.liquid %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +40,7 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFGZT3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-{% include _header.html gray=true %}
+{% include _header.liquid gray=true %}
 <main>
   <section class="white blog">
     <div class="container">
@@ -107,6 +107,6 @@
     </div>
   </section>
 </main>
-{% include _footer.html %}
+{% include _footer.liquid %}
 </body>
 </html>

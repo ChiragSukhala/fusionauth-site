@@ -16,13 +16,18 @@ Prime.Document.onReady(function() {
     a.addEventListener('click', function(event) {
       Prime.Utils.stopEvent(event);
       const i = a.queryLast('i');
-      const ul = a.getNextSibling();
-      if (ul.hasClass('open')) {
-        i.removeClass('fa-chevron-up').addClass('fa-chevron-down');
-        ul.removeClass('open');
+
+      var li = a.queryUp('li');
+      if (li === null) {
+        li = a.queryUp('aside');
+      }
+
+     if (li.hasClass('open')) {
+       li.removeClass('open');
+       i.removeClass('fa-chevron-up').addClass('fa-chevron-down');
       } else {
-        i.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-        ul.addClass('open');
+       li.addClass('open');
+       i.removeClass('fa-chevron-down').addClass('fa-chevron-up');
       }
     });
   });

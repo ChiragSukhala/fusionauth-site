@@ -6,6 +6,7 @@
   - style_class << "fa-#{attr :size}" if attr? :size
   - style_class << "fa-rotate-#{attr :rotate}" if attr? :rotate
   - style_class << "fa-flip-#{attr :flip}" if attr? :flip
+  - style_class << "#{attr :role}" if attr? :role
   - if attr? :link
     %a.image{:href=>(attr :link), :target=>(attr :window)}
       %i{:class=>style_class, :title=>(attr :title)}

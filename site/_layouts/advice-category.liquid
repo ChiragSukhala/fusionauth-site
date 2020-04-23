@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include _head.html %}
+  {% include _head.liquid %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -26,7 +26,7 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <section class="blue main hero">
-  {% include _header.html %}
+  {% include _header.liquid %}
   <div class="container content">
     <div class="row">
       <div class="col-xs-12 col-lg-6 text">
@@ -64,12 +64,12 @@
 
 <section class="white">
   <div class="container">
-    {% include _resources.html %}
+    {% include _resources.liquid %}
   </div>
 </section>
 
-{% include _built-for-devs.html %}
+{% include _built-for-devs.liquid %}
 
-{% include _footer.html %}
+{% include _footer.liquid %}
 </body>
 </html>

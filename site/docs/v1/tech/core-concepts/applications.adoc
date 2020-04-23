@@ -65,7 +65,7 @@ A role may be optionally marked as a super user role. This indicator is just a m
 [field]#Description# [optional]#Optional#::
 An optional description to better describe the intended use of this role.
 
-To manage Application Roles after you have added an Application, click the icon:user[role=purple inline ui-button] Manage Roles button on the index page.
+To manage Application Roles after you have added an Application, click the icon:user[role=ui-button purple,type=fas] Manage Roles button on the index page.
 
 image::applications.png[Applications,width=1200,role=shadowed bottom-cropped]
 

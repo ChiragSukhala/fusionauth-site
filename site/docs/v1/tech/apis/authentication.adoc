@@ -8,9 +8,9 @@ description: Learn how the FusionAuth APIs authenticate requests
 
 The FusionAuth APIs are primarily secured using API keys, a few APIs may optionally take a JWT. Below you will find a detailed explanation of each type of authentication used in the API documentation.
 
-* &nbsp;&nbsp;icon:lock[role=red,type=far] <<API Key Authentication>>
-* &nbsp;&nbsp;icon:id-badge[role=green,type=far] <<JWT Authentication>>
-* &nbsp;&nbsp;icon:unlock-alt[role=green,type=far] <<No Authentication Required>>
+* icon:lock[role=red,type=fas] &nbsp;<<API Key Authentication>>
+* icon:id-badge[role=green,type=fas] &nbsp;<<JWT Authentication>>
+* icon:unlock[role=green,type=fas] &nbsp;<<No Authentication Required>>
 
 {nbsp} +
 
@@ -21,7 +21,7 @@ API keys must be created in the FusionAuth admin user interface, this function i
 
 == API Key Authentication
 
-When an API is marked with a red locked icon such as &nbsp;&nbsp;icon:lock[role=red,type=far] it means you are required to provide authentication.
+When an API is marked with a red locked icon such as &nbsp;&nbsp;icon:lock[role=red,type=fas] it means you are required to provide authentication.
 FusionAuth primarily controls access to the API through the use of an API key. All secured APIs by default all APIs will return an `401 Unauthorized` response.
 
 To enable access to a secured API create one or more API keys in the FusionAuth user interface. The API key is then supplied in the HTTP

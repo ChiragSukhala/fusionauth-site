@@ -61,7 +61,7 @@ If you want to skip all the reading and just get down to some code, the next sec
 
 Start by logging into Twitter and navigating the Twitter developer console. Once you're there, navigate to the `Keys and tokens` tab of the application you're integrating. Here you will find a few key pieces of information that you'll need to sign the request.
 
-{% include _image.html src="/assets/img/docs/twitter-keys-tokens.png" alt="Twitter Consumer API Keys" class="img-fluid" figure=false %}
+{% include _image.liquid src="/assets/img/docs/twitter-keys-tokens.png" alt="Twitter Consumer API Keys" class="img-fluid" figure=false %}
 
 Make note of the two values in the `Consumer API Keys` section, they are suffixed with the labels `API key` and `API secret key`. Once you are in the OAuth v1 world, we'll be using the `API key` value for the consumer key and the `API secret key` value for the consumer secret.
 
@@ -298,4 +298,4 @@ public class OAuth1AuthorizationHeaderBuilder {
 
 This code is a simple builder that collects the values for each piece of the OAuth v1 `request_token` endpoint and builds and signs the header value. This class can actually be used for any OAuth v1 compliant identity provider, not just Twitter.
 
-{% include _advice-get-started.html intro="If you are looking for a solution that handles all your login and registration needs, including social logins, FusionAuth has you covered." %}
+{% include _advice-get-started.liquid intro="If you are looking for a solution that handles all your login and registration needs, including social logins, FusionAuth has you covered." %}

@@ -2,7 +2,7 @@
 <html lang="en">
 <!--suppress HtmlRequiredTitleElement -->
 <head>
-  {% include _head.html %}
+  {% include _head.liquid %}
   {% if page.homepage %}
   <script type="application/ld+json">
     {
@@ -45,6 +45,6 @@
 {% else %}
   {{ content }}
 {% endif %}
-{% include _footer.html %}
+{% include _footer.liquid %}
 </body>
 </html>
