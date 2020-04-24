@@ -98,7 +98,7 @@
           </div>
         </li>
         <li>
-          <a href="{% if  %}https://account.fusionauth.io" class="account">
+          <a href="{% if jekyll.environment == 'development' %}https://account-local.fusionauth.io{% else %}https://account.fusionauth.io{% endif %}/account/" class="account">
             <span>Account</span>
             <i class="fal fa-user-circle fa-2x fa-fw"></i>
           </a>
