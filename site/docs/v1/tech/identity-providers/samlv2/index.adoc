@@ -56,7 +56,7 @@ A unique name to identity the identity provider. This name is for display purpos
 [field]#IdP endpoint# [required]#Required#::
 The URL of the SAML identity providers login page.
 
-[field]#Callback URL (ACS)#[ read-only]#Read-only#::
+[field]#Callback URL (ACS)# [read-only]#Read-only#::
 This is the callback URI you will need to provide to your identity provider.
 
 [field]#Issuer# [required]#Required#::

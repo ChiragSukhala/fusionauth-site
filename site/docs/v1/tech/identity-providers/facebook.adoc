@@ -37,7 +37,7 @@ In order to enable the Login with Facebook option in FusionAuth we'll need to ad
 
 Click on the `Add a new App` button to create a new Facebook application. The application `Display Name` will be shown to users when they log into FusionAuth using Facebook. Complete this form and click the `Create App ID` button.
 
-image::facebook-add-new-app-id.png[Add new Facebook Application,width=1200,role=shadowed mb-3]
+image::facebook-add-new-app-id.png[Add new Facebook Application,width=1200,role=shadowed bottom-cropped]
 
 === Configure Facebook Login
 
@@ -45,7 +45,7 @@ In order to enable Facebook login for this newly created Application, add the `F
 
 You'll now have the `Facebook Login` product listed under the `Products` section of your application. Click on the `Settings` sub-menu of the `Facebook Login` section in the left navigation. Review this page to ensure it meets your security requirements, however the default Client OAuth Settings should be sufficient.
 
-image::facebook-login-settings.png[Configure Facebook Login,width=1200,role=shadowed mb-3 mt-3]
+image::facebook-login-settings.png[Configure Facebook Login,width=1200,role=shadowed bottom-cropped top-cropped]
 
 === Collect App ID and App Secret
 

@@ -54,13 +54,5 @@ The unique application Id issued to you by HYPR to provided access to their API.
 [field]#Relying party URL# [required]#Required#::
 The relying party URL issued to you by HYPR to provided access to their API.
 
-[field]#Enable licensing# [optional]#Optional#::
-Enable licensing when using the HYPR application from the Apple or Google application store. If you are using the HYPR SDK in your own application you should disable licensing.
-
-[field]#License URL# [required]#Required#::
-The licensing URL provided to you by HYPR. I have no idea what this URL does but I think it has to do with licensing.
-+
-When [field]#Enable licensing# is enabled, this field will be required.
-
 [field]#Debug enabled# [optional]#Optional# [default]#defaults to `false`#::
 Enable debug to create an event log to assist you in debugging integration errors.

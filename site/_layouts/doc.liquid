@@ -194,7 +194,7 @@
                   </ul>
                 </li>
                 <li {% if page.url contains "/oauth/" %} class="open"{% endif %}>
-                  <a href="#" class="sub-menu"><i class="fab fa-fw fa-openid"></i> OpenID Connect <i class="fal fa-chevron-{% if page.url contains "/oauth/" %}up{% else %}down{% endif %} fa-fw"></i></a>
+                  <a href="#" class="sub-menu"><i class="fab fa-fw fa-openid"></i> OpenID Connect & OAuth 2.0<i class="fal fa-chevron-{% if page.url contains "/oauth/" %}up{% else %}down{% endif %} fa-fw"></i></a>
                   <ul>
                     <li {% if page.url == "/docs/v1/tech/oauth/" %}class="active"{% endif %}><a href="/docs/v1/tech/oauth/">Overview</a></li>
                     <li {% if page.url == "/docs/v1/tech/oauth/endpoints.html" %}class="active"{% endif %}><a href="/docs/v1/tech/oauth/endpoints">Endpoints</a></li>
@@ -244,7 +244,7 @@
                 </li>
                 <li {% if page.url == "/docs/v1/tech/release-notes.html" %}class="active"{% endif %}><a href="/docs/v1/tech/release-notes"><i class="fal fa-fw fa-list-ol"></i> Release Notes</a></li>
                 <li {% if page.url == "/docs/v1/tech/troubleshooting.html" %}class="active"{% endif %}><a href="/docs/v1/tech/troubleshooting"><i class="fal fa-fw fa-exclamation-circle"></i> Troubleshooting</a></li>
-                <li><a href="/docs/v1/tech/common-errors" class="last {% if page.url == "/docs/v1/tech/common-errors.html" %}active{% endif %}"><i class="fal fa-fw fa-bug"></i> Common Errors</a></li>
+                <li {% if page.url == "/docs/v1/tech/common-errors.html" %}class="active{% endif %}"><a href="/docs/v1/tech/common-errors"><i class="fal fa-fw fa-bug"></i> Common Errors</a></li>
               </ul>
             </nav>
           </aside>

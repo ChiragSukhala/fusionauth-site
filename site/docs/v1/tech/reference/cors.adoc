@@ -70,28 +70,17 @@ Internal Note: This needs to match our shipped CORS configuration. See Migration
 `true`
 
 [field]#Allow credentials#::
-`true`
+`false`
 
-[field]#Allowed headers3::
-* `Accept`
-* `Access-Control-Request-Headers`
-* `Access-Control-Request-Method`
-* `Authorization Content-Type`
-* `Last-Modified`
-* `Origin`
-* `X-FusionAuth-TenantId`
-* `X-Requested-With`
+[field]#Allowed headers#::
+`Accept`, `Access-Control-Request-Headers`, `Access-Control-Request-Method`, `Authorization Content-Type`, `Last-Modified`, `Origin`, `X-FusionAuth-TenantId`, `X-Requested-With`
 
 [field]#Allowed methods#::
 * `GET`
-* `POST`
-* `PUT`
-* `DELETE`
-* `HEAD`
 * `OPTIONS`
 
 [field]#Allowed origins#::
-`*`
+None
 
 [field]#Exposed headers#::
 * `Access-Control-Allow-Origin`
@@ -99,43 +88,3 @@ Internal Note: This needs to match our shipped CORS configuration. See Migration
 
 [field]#Preflight max age#::
 `1800`
-
-== Legacy Configuration
-
-Prior to version 1.8.0, the CORS configuration was fixed and not modifiable. Below you will find a summary of the configuration in case it is helpful.
-
-=== CORS Included URI Paths
-The following URLs or URL patterns will pass through the CORS filter.
-
-////
-Internal Note: This needs to match our shipped CORS configuration. See /fusionauth-app/web/WEB-INF/web.xml
-////
-
-* `/api/*`
-* `/oauth2/introspect`
-* `/oauth2/userinfo`
-* `/.well-known/openid-configuration`
-* `/.well-known/jwks`
-* `/.well-known/jwks.json`
-
-==== Legacy CORS Configuration
-
-[.api]
-|Access-Control-Allow-Credentials
-|`true`
-
-|Access-Control-Allow-Origin
-|`*`
-
-|Access-Control-Allow-Methods
-|`GET,POST,HEAD,OPTIONS,PUT,DELETE`
-
-|Access-Control-Allow-Headers
-|`Content-Type,X-Requested-With,Accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,Last-Modified,X-FusionAuth-TenantId`
-
-|Access-Control-Expose-Headers
-|`Access-Control-Allow-Origin,Access-Control-Allow-Credentials`
-
-|Access-Control-Max-Age
-|`1800`
-|===

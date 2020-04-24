@@ -63,7 +63,7 @@ If you will be using this Twitter app for other purposes, you may need more than
 
 Click `Save` once you have completed these changes.
 
-image::twitter-permissions.png[Twitter App Permissions,width=1200,role=shadowed mb-2]
+image::twitter-permissions.png[Twitter App Permissions,width=1200,role=shadowed bottom-cropped]
 
 === Keys and token
 
@@ -71,7 +71,7 @@ Now click on the `Keys and tokens` tab, in this section you will find the Consum
 
 There is no further configuration to perform on this panel, you will only need to record or copy these values for the next step.
 
-image::twitter-keys-tokens.png[Twitter Keys and tokens,width=1200,role=shadowed mb-2]
+image::twitter-keys-tokens.png[Twitter Keys and tokens,width=1200,role=shadowed bottom-cropped]
 
 
 == Create a Twitter Identity Provider

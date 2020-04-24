@@ -12,13 +12,13 @@ You may modify this file in order to change your configuration, FusionAuth will 
 Assuming you installed in the default locations, the configuration file may be found in the following directory. If you have installed in an
 alternate location the path to this file will be different.
 
-[.command-line]
+[source,text]
 .Linux and macOS
 ----
 /usr/local/fusionauth/config/fusionauth.properties
 ----
 
-[.command-line]
+[source,text]
 .Windows
 ----
 \fusionauth\config\fusionauth.properties
@@ -73,19 +73,19 @@ Special values include:
     * `\_global_` - Any globally-scoped addresses on the system, for example `8.8.8.8`.
 +
 The following is an example to bind to `localhost` as well as any site local addresses on the system such at `192.168.1.42`.
-
++
 [quote]
 `fusionauth-search.hosts=\_local_,\_site_`
 
 [field]#fusionauth-search.servers# [type]#[String]# [default]#defaults to `localhost:9020`#::
 A comma separated list of stand-alone search engine servers that will be used by FusionAuth. The port specified on the server should be the
 Search Engine Transport port, not the HTTP port.
-
++
 The following is an example of a configuration for two separate search engines, one running on localhost and the other is on remote system.
-
++
 [quote]
 `fusionauth-search.servers=localhost:9020,search2.example.com:9020`
-
++
 This configuration value is used by the FusionAuth Search and the FusionAuth App services. Even when running FusionAuth App without
 FusionAuth Search on the same server this configuration value will need to be provided.
 
@@ -103,7 +103,7 @@ A comma separated list of URLS that will be used by FusionAuth to connect to the
 Generally this should be the same list provided by `fusionauth-search.servers` except this list will be a list of URLs and this value is utilized by the FusionAuth webservice. If this property is not defined it will be generated based upon the value of `fusionauth-search.servers`.
 +
 The following is an example of a configuration for two separate search engines, one running on localhost and the other is on a remote system.
-
++
 [quote]
 `fusionauth-app.search-servers=http://localhost:9021,http://search2.example.com:9021`
 
