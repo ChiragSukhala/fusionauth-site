@@ -37,8 +37,8 @@ If you will be handling Email Verification yourself, you will need to update thi
 ==== Base Information
 
 [.api]
-|Id
-|The unique Id of the email template. The template Id may not be changed and will be used to interact with the template when using the Email APIs.
+[field]#Id# [optional]#Optional#::
+The unique Id of the email template. The template Id may not be changed and will be used to interact with the template when using the Email APIs.
 
 [field]#Name# [required]#Required#::
 The name of the template. This value is for display purposes only and can be changed at any time.

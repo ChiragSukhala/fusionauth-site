@@ -788,7 +788,7 @@ The last step to configuring Monit is to edit the file `/etc/monit/monitrc`. Add
 
 ```config
 set mailserver smtp.sendgrid.net port 587 username "<sendgrid-username>" password "<sendgrid-password>" using tlsv12
-set alert brian@fusionauth.io not on { instance, action }
+set alert  jared@piedpiper.com not on { instance, action }
 ```
 
 The second line tells Monit to email me whenever alerts happen, but to ignore alerts I created manually. This will reduce spamming your inbox if you choose to use Monit for other tasks such as process watching and restarting.
@@ -1250,7 +1250,7 @@ In addition to password validation, you should never store passwords in plain-te
 Before we get to hashing of passwords, let's take a quick look at some code and SQL that handles login. This is important to avoid SQL injection and other attacks that could compromise your application. Applications should always load the identity information from the database into memory using **ONLY** the unique identifier. Here's an example select statement:
 
 ```sql
-SELECT login, password FROM users WHERE login = 'brian@fusionauth.io';
+SELECT login, password FROM users WHERE login = ' jared@piedpiper.com';
 ```
 
 Once you have to identity information in memory, you can take the password that the user provided on the login form, hash it, and then compare it with the value from the database. Here's some example code:

@@ -281,7 +281,7 @@ Whether or not registrations to this Application may be verified. When this is s
 
 [field]#webhookIds# [type]#[Array<UUID>]# [optional]#Optional#::
 An array of Webhook Ids. For Webhooks that are not already configured for All Applications, specifying an Id on this request will indicate the associated Webhook should handle events for this application.
-+
+
 ifdef::includeRoles[]
 [source,json]
 .Example Request JSON
@@ -289,7 +289,6 @@ ifdef::includeRoles[]
 include::../../../src/json/applications/post-request.json[]
 ----
 endif::includeRoles[]
-+
 ifndef::includeRoles[]
 [source,json]
 .Example Request JSON
@@ -297,3 +296,4 @@ ifndef::includeRoles[]
 include::../../../src/json/applications/put-request.json[]
 ----
 endif::includeRoles[]
+

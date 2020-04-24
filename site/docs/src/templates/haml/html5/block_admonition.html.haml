@@ -1,11 +1,5 @@
 %div{:id=>@id, :class=>['admonitionblock', (attr :name), role]}
   - if @document.attr? :icons, 'font'
     %i{:class=>"icon #{attr :name}", :title=>@caption}
-  - elsif @document.attr? :icons
-    %img{:src=>icon_uri(attr :name), :alt=>@caption}
-  - else
-    .title=@caption
   %div.body
-    - if title?
-      .title=title
     =content

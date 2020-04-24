@@ -158,7 +158,7 @@ The header value to add to the HTTP request when sending the event to the webhoo
 
 Once you have a webhook up and running and configured to receive JSON events from FusionAuth you may wish to test it by sending different events. FusionAuth has built in a test capability to allow you to construct any event and send it to your webhook.
 
-Navigate to [breadcrumb]#Settings -> Webhooks# and select the purple image:test-icon.png[Test button,width=28,role=inline] icon for the webhook you wish to test. Select the event type to test, optionally modify the JSON to test a specific scenario and then use the send button in the top right to send the event to the webhook.
+Navigate to [breadcrumb]#Settings -> Webhooks# and select the purple icon:exchange[Test button,width=28,role=ui-button purple,type=fas] icon for the webhook you wish to test. Select the event type to test, optionally modify the JSON to test a specific scenario and then use the send button in the top right to send the event to the webhook.
 
 image::webhook-test.png[Webhook Test,width=1200,role=shadowed]
 
