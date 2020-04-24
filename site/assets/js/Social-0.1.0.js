@@ -1,3 +1,4 @@
+"use strict";
 Prime.Document.onReady(function() {
   // Social shares
   Prime.Document.query(".social-share-buttons a").each(function(e) {

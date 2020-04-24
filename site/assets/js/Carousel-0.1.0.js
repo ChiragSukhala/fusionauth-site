@@ -1,3 +1,4 @@
+"use strict";
 Prime.Document.onReady(function() {
   Prime.Document.query('.carousel').each(function(e) {
     e.queryFirst('.changer-left').addEventListener('click', function(event) {

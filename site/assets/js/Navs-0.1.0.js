@@ -1,3 +1,4 @@
+"use strict";
 Prime.Document.onReady(function() {
   // Main nav
   Prime.Document.queryFirst('.menu-open').addEventListener('click', function(event) {
@@ -17,16 +18,18 @@ Prime.Document.onReady(function() {
       Prime.Utils.stopEvent(event);
       const i = a.queryLast('i');
 
-      var li = a.queryUp('li');
-      if (li === null) {
-        li = a.queryUp('aside');
+      //noinspection SpellCheckingInspection
+      var openable = a.queryUp('li');
+      if (openable === null) {
+        // On mobile, the next sibling will be the main <ul>
+        openable = a.getNextSibling();
       }
 
-     if (li.hasClass('open')) {
-       li.removeClass('open');
+     if (openable.hasClass('open')) {
+       openable.removeClass('open');
        i.removeClass('fa-chevron-up').addClass('fa-chevron-down');
       } else {
-       li.addClass('open');
+       openable.addClass('open');
        i.removeClass('fa-chevron-down').addClass('fa-chevron-up');
       }
     });

@@ -223,11 +223,12 @@ Here is an example of the JSON response body that contains the refresh token:
 include::docs/src/json/login/login-response-short-refresh-token.json[]
 ----
 
-[WARNING]
-====
+[quote]
+[role=warn]
+____
 *Note*: Refresh Tokens are considered sensitive information. The token must be secured on the User's device. If a Refresh Token is compromised,
 the token bearer may perform authenticated requests on behalf of the User.
-====
+____
 
 Once you have a refresh token on the device, you can call the link:../apis/jwt#refresh-a-jwt[Refresh a JWT] API to get a new JWT from FusionAuth using the refresh token.
 Using this pattern allows you to perform authenticated actions using the JWT without prompting the User to authenticate as long as the refresh token is active.

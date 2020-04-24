@@ -1,3 +1,4 @@
+"use strict";
 Prime.Document.onReady(function() {
   /* Use a Font Awesome glyph for bread crumbs */
   Prime.Document.query('span.breadcrumb').each(function(element) {

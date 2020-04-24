@@ -1,3 +1,4 @@
+"use strict";
 Prime.Document.onReady(function() {
   Prime.Document.query('.collapsible .collapse-button').each(function(e) {
     e.addEventListener('click', function(event) {
