@@ -46,14 +46,12 @@ Determines if this provider is enabled. If it is false then it will be disabled 
 The top-level fields that you are requesting from Facebook.
 +
 [since]#Available Since 1.11.0#
-+
 The default value of `email` is now provided and stored in the database when this field is not specified.  This is a required `fields` value for retrieving the user's email address from the link:https://developers.facebook.com/docs/graph-api/using-graph-api/[Facebook Graph API]. Prior to this version, the value was defaulted at run-time.
 
 [field]#identityProvider.permissions# [type]#[String]# [optional]#Optional# [default]#defaults to `email`#::
 The top-level permissions that your application is asking of the user's Facebook account.
 +
 [since]#Available Since 1.11.0#
-+
 The default value of `email` is now provided and stored in the database when this field is not specified.  This is a required `permissions` value for the link:https://developers.facebook.com/docs/facebook-login/[Facebook Login API] to complete login. Prior to this version, the value not defaulted.
 
 [field]#identityProvider.type# [type]#[String]# [required]#Required#::
