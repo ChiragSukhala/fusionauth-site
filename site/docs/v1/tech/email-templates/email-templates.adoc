@@ -421,7 +421,7 @@ http://localhost:9011/registration/verify/${verificationId}?tenantId=${user.tena
 The User object.
 
 [field]#registration#::
-|
+The Registration object.
 
 [field]#verificationId#::
 The verification Id intended to be used by the link:/docs/v1/tech/apis/users#verify-a-users-email[Verify Email] API.

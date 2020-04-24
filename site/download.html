@@ -18,13 +18,13 @@ description: Get started in seconds - installs with a single command. This is th
     <div class="row">
       <div class="col-xs downloads">
         <ul class="tabs">
-          <li><a href="#linux"><img src="/assets/img/stamps/linux.svg" alt="Linux"> Linux</a></li>
-          <li><a href="#macos"><img src="/assets/img/stamps/macos.svg" alt="MacOS"> MacOS</a></li>
-          <li><a href="#windows"><img src="/assets/img/stamps/windows.svg" alt="Windows"> Windows</a></li>
-          <li><a href="#docker"><img src="/assets/img/stamps/docker.svg" alt="Docker"> Docker</a></li>
+          <li><a href="#linux"><img src="/assets/img/stamps/linux.svg" alt="Linux"> <span>Linux</span></a></li>
+          <li><a href="#macos"><img src="/assets/img/stamps/macos.svg" alt="macOS"> <span>macOS</span></a></li>
+          <li><a href="#windows"><img src="/assets/img/stamps/windows.svg" alt="Windows"> <span>Windows</span></a></li>
+          <li><a href="#docker"><img src="/assets/img/stamps/docker.svg" alt="Docker"> <span>Docker</span></a></li>
         </ul>
         <div id="linux" class="tab-content">
-          <h2>Linux Download</h2>
+          <h2>Linux</h2>
           <p>
             Copy and paste the code below and we'll do the rest.
           </p>
@@ -33,18 +33,18 @@ description: Get started in seconds - installs with a single command. This is th
           </p>
           <div class="download-command">
             <code>sh -c "curl -fsSL https://raw.githubusercontent.com/FusionAuth/fusionauth-install/master/install.sh | sh -s - -z"</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             <em>Installs for all users on the system using DEB or RPM packages</em>
           </p>
           <div class="download-command">
             <code>sh -c "curl -fsSL https://raw.githubusercontent.com/FusionAuth/fusionauth-install/master/install.sh | sh"</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
         </div>
         <div id="macos" class="tab-content">
-          <h2>MacOS Download</h2>
+          <h2>macOS</h2>
           <p>
             Copy and paste the code below into Terminal and we'll do the rest.
           </p>
@@ -53,7 +53,7 @@ description: Get started in seconds - installs with a single command. This is th
           </p>
           <div class="download-command">
             <code>sh -c "curl -fsSL https://raw.githubusercontent.com/FusionAuth/fusionauth-install/master/install.sh | sh"</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             Or install using <a href="https://brew.sh/">Homebrew</a> using the following commands.
@@ -63,25 +63,25 @@ description: Get started in seconds - installs with a single command. This is th
           </p>
           <div class="download-command">
             <code>brew tap fusionauth/homebrew-fusionauth</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             <em>Install FusionAuth components</em>
           </p>
           <div class="download-command">
             <code>brew install fusionauth-app fusionauth-search</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             <em>Start FusionAuth</em>
           </p>
           <div class="download-command">
             <code>brew services start fusionauth-search; brew services start fusionauth-app</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
         </div>
         <div id="windows" class="tab-content">
-          <h2>Windows Download</h2>
+          <h2>Windows</h2>
           <p>
             Copy and paste the code below into Powershell and we'll do the rest.
           </p>
@@ -90,11 +90,11 @@ description: Get started in seconds - installs with a single command. This is th
           </p>
           <div class="download-command">
             <code>iex (new-object net.webclient).downloadstring('https://raw.githubusercontent.com/FusionAuth/fusionauth-install/master/install.ps1')</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
         </div>
         <div id="docker" class="tab-content">
-          <h2>Docker Download</h2>
+          <h2>Docker</h2>
           <p>
             Use the following Docker commands to get up and running quickly. Please feel free to open an issue or submit a pull request in <a href="https://github.com/FusionAuth/fusionauth-containers">GitHub</a> if you find an issue.
           </p>
@@ -103,14 +103,14 @@ description: Get started in seconds - installs with a single command. This is th
           </p>
           <div class="download-command">
             <code>curl -o docker-compose.yml https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/docker-compose.yml &amp;&amp; curl -o .env https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/.env &amp;&amp; docker-compose up</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             <em>Installs only FusionAuth App in the container</em>
           </p>
           <div class="download-command">
             <code>docker pull fusionauth/fusionauth-app</code>
-            <button class="orange square button"><i class="fas fa-clipboard fa-2x fa-fw"></i></button>
+            <button class="blue square button"><i class="fad fa-copy fa-2x fa-fw"></i></button>
           </div>
           <p>
             All images can be found on <a href="https://hub.docker.com/u/fusionauth/">Docker Hub</a>. Review our <a href="https://fusionauth.io/docs/v1/tech/installation-guide/docker">Docker Installation</a> guide for additional information.
