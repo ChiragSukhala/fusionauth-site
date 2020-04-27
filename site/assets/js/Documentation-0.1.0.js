@@ -11,7 +11,7 @@ FusionAuth.Documentation = function() {
   this.scrollTop = Prime.Document.queryById('scroll-top');
   if (this.scrollTop !== null) {
     this.scrollTop.addEventListener('click', this._handleClick);
-    window.onscroll = this._handleScroll;
+    window.addEventListener('scroll', this._handleScroll);
   }
 
   // Hide if the page is short so we don't this button high up on the page.

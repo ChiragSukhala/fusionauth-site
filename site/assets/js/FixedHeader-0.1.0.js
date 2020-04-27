@@ -7,13 +7,22 @@ FusionAuth.FixedHeader = function() {
   Prime.Utils.bindAll(this);
   this.header = Prime.Document.queryFirst('header');
 
-  window.onscroll = this.handleOnScroll;
-  this.restoreState();
+  window.addEventListener('scroll', this._handleOnScroll);
+  this._restoreState();
 };
 
 FusionAuth.FixedHeader.constructor = FusionAuth.FixedHeader;
 FusionAuth.FixedHeader.prototype = {
-  handleOnScroll: function() {
+
+  hide: function() {
+    this.header.removeClass('gray').removeClass('animate');
+  },
+
+  show: function() {
+    this.header.addClass('gray').addClass('animate');
+  },
+
+  _handleOnScroll: function() {
     if (window.pageYOffset > 500) {
       this.show();
       localStorage.setItem('animate-header', 'true');
@@ -23,23 +32,15 @@ FusionAuth.FixedHeader.prototype = {
     }
   },
 
-  hide: function() {
-    this.header.removeClass('gray').removeClass('animate');
-  },
-
   // Preserve state on page refresh to keep movement down.
-  restoreState: function() {
+  _restoreState: function() {
     const animateHeader = (localStorage.getItem('animate-header') || 'false') === 'true';
     if (animateHeader) {
       this.show();
     } else {
       this.hide();
     }
-  },
-
-  show: function() {
-    this.header.addClass('gray').addClass('animate');
-  },
+  }
 };
 
 
