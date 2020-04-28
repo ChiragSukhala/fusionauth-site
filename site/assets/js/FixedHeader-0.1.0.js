@@ -7,6 +7,9 @@ FusionAuth.FixedHeader = function() {
   Prime.Utils.bindAll(this);
   this.header = Prime.Document.queryFirst('header');
 
+  // Reset when we navigate away from the page
+  new Prime.Document.Element(document.body).addEventListener('click', this._resetHeader);
+
   window.addEventListener('scroll', this._handleOnScroll);
   this._restoreState();
 };
@@ -30,6 +33,10 @@ FusionAuth.FixedHeader.prototype = {
       this.hide();
       localStorage.setItem('animate-header', 'false');
     }
+  },
+
+  _resetHeader: function() {
+    localStorage.setItem('animate-header', 'false');
   },
 
   // Preserve state on page refresh to keep movement down.
