@@ -2,7 +2,7 @@
 layout: advice
 title: The Definitive Guide to OAuth version 2.0
 description: This article is a detailed overview of the OAuth 2 protocol and how it is implemented and used.
-image: advice/everything-about-oauth.png
+image: advice/everything-about-oauth-article.png
 author: Matt Boisseau
 category: OAuth
 date: 2020-02-29
