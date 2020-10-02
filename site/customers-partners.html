@@ -9,10 +9,22 @@ description: Here are just a few of the companies and organizations using Fusion
       <div class="col-xs-12 col-lg-7 centered">
         <h1>Companies Using FusionAuth</h1>
         <p>
-          With over 300,000 downloads and thousands of customers, FusionAuth is one of the worlds leading identity and user management solutions. Here are some of our awesome customers who are using FusionAuth for all of their identity and user management needs.
+          With over 500,000 downloads and thousands of customers, FusionAuth is one of the worlds leading identity and user management solutions. Here are some of our awesome customers who are using FusionAuth for all of their identity and user management needs.
         </p>
       </div>
     </div>
+
+    <div class="cards row center">
+      {% for customer in site.data.customers limit: 4 %}
+      <a href="/blog/2019/03/06/keycloak-fusionauth-comparison" class="col-xs-12 col-lg-3 light-gray even competitor card">
+        <div class="image-container">
+          <img src="/assets/img/competition/keycloak_logo.svg" alt="Keycloak">
+        </div>
+        <p class="name">{{customer.alt}}</p>
+      </a>
+      {% endfor %}
+    </div>
+
     <div class="responsive-table">
       {% for customer in site.data.customers %}
         <div class="item centered">
@@ -25,4 +37,25 @@ description: Here are just a few of the companies and organizations using Fusion
   </div>
 </section>
 
-{% include _complete-auth.liquid %}
+<section class="gray">
+  <div class="container">
+    <header class="centered">
+      <h1>What Our Customers Are Saying</h1>
+    </header>
+    {% include _quotes.liquid %}
+  </div>
+</section>
+
+{% comment %}
+<section class="blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-7 text">
+        <h1>Partners</h1>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+
+{% include _built-for-devs.liquid %}
