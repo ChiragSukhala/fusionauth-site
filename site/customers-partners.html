@@ -15,24 +15,50 @@ description: Here are just a few of the companies and organizations using Fusion
     </div>
 
     <div class="cards row center">
-      {% for customer in site.data.customers limit: 4 %}
-      <a href="/blog/2019/03/06/keycloak-fusionauth-comparison" class="col-xs-12 col-lg-3 light-gray even competitor card">
-        <div class="image-container">
-          <img src="/assets/img/competition/keycloak_logo.svg" alt="Keycloak">
-        </div>
-        <p class="name">{{customer.alt}}</p>
-      </a>
-      {% endfor %}
-    </div>
-
-    <div class="responsive-table">
       {% for customer in site.data.customers %}
-        <div class="item centered">
-          <img src="/assets/img/customers/{{ customer.image }}" style="{% if customer.width %} width:{{customer.width}}{% endif %}{% if customer.height %} height:{{customer.height}}{% endif %}; max-width: 150px;" alt="{{customer.alt}}">
-        </div>
+        {% if customer.featured %}
+          <a href="{{ customer.href }}" class="col-xs-12 col-md-6 col-lg-4 col-xl-3 light-gray even customer card">
+            <img src="/assets/img/customers/{{ customer.image }}" alt="{{ customer.alt }}">
+            <p>
+              {{ customer.description }}
+            </p>
+            {% if customer.hasCaseStudy %}
+              <span>read the case study <i class="fal fa-arrow-right"></i></span>
+            {% else %}
+              <span>visit their website <i class="fal fa-arrow-right"></i></span>
+            {% endif %}
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
-    <div class="row">
+  </div>
+
+  <!-- More -->
+  <div class="collapsible">
+    <header style="justify-content: center;">
+      <a href="#" class="collapse-button stack orange brochure button">VIEW MORE&nbsp;<i class="fas fa-chevron-circle-up fa-1x"></i></a>
+    </header>
+    <div class="collapsible-content">
+      <div class="collapsible-spacer">&nbsp;</div>
+      <div class="container">
+        <div class="cards row center">
+          {% for customer in site.data.customers %}
+            {% if customer.featured == false %}
+              <a href="{{ customer.href }}" class="col-xs-12 col-md-6 col-lg-4 col-xl-3 light-gray even customer card">
+                <img src="/assets/img/customers/{{ customer.image }}" alt="{{ customer.alt }}">
+                <p>
+                  {{ customer.description }}
+                </p>
+                {% if customer.hasCaseStudy %}
+                  <span>read the case study <i class="fal fa-arrow-right"></i></span>
+                {% else %}
+                  <span>visit their website <i class="fal fa-arrow-right"></i></span>
+                {% endif %}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -46,16 +72,26 @@ description: Here are just a few of the companies and organizations using Fusion
   </div>
 </section>
 
-{% comment %}
-<section class="blue">
-  <div class="container">
+<section class="blue hero">
+  <div class="container content">
     <div class="row">
-      <div class="col-xs-12 col-lg-7 text">
+      <div class="col-xs-12 text">
         <h1>Partners</h1>
       </div>
+      {% for partner in site.data.partners %}
+        <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 light-gray even customer card">
+          <img src="/assets/img/partners/{{ partner.image }}" alt="{{ partner.alt }}">
+          <p>
+            {{ partner.description }}
+          </p>
+          <a href="{{ partner.href }}" class="blue brochure button">VISIT THEIR WEBSITE</a>
+        </div>
+      {% endfor %}
     </div>
   </div>
+  <div class="hero-image less-top right">
+    <img src="/assets/img/heroes/pricing-hosting.svg" alt="Partners">
+  </div>
 </section>
-{% endcomment %}
 
 {% include _built-for-devs.liquid %}
