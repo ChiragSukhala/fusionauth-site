@@ -1,21 +1,27 @@
 - alt: DataStax
-  description: DataStax is a hybrid database-as-a-service built on Apache Cassandra.
+  description: DataStax improved performance by 59% by switching from Stormpath to FusionAuth.
   featured: true
   hasCaseStudy: true
   href: /resources/datastax-case-study.pdf
   image: datastax-black-blue-logo.png
+- alt: dealcloser
+  description: dealcloser saved time and money by switching from Auth0 to FusionAuth.
+  featured: true
+  hasCaseStudy: true
+  href: /resources/dealcloser-case-study.pdf
+  image: dealcloser-logo.png
 - alt: radio.com
   description: RADIO.COM is a free broadcast and Internet radio platform owned by Entercom.
   featured: true
   hasCaseStudy: false
   href: https://www.radio.com
   image: radio-com-logo.png
-- alt: Unsupervised
-  description: Unsupervised automatically analyzes your data and discovers your biggest problems and opportunities.
+- alt: Elf on the Shelf
+  description: A fun-filled, fast-paced company where the magic of Christmas thrives year-round!
   featured: true
   hasCaseStudy: false
-  href: https://unsupervised.com
-  image: unsupervised-logo.png
+  href: https://www.elfontheshelf.com
+  image: elf-on-the-shelf-logo.svg
 - alt: StrategyCorps
   description: StrategyCorps has been the industry leader in providing retail checking solutions to hundreds of banks and credit unions.
   featured: true
@@ -28,12 +34,6 @@
   hasCaseStudy: false
   href: https://studiocdn.com
   image: studio-cdn-logo.png
-- alt: Elf on the Shelf
-  description: A fun-filled, fast-paced company where the magic of Christmas thrives year-round!
-  featured: true
-  hasCaseStudy: false
-  href: https://www.elfontheshelf.com
-  image: elf-on-the-shelf-logo.svg
 - alt: GBM
   description: GBM is a leading IT integrator in Central America and the Carribbean.
   hasCaseStudy: false
@@ -113,3 +113,9 @@
   hasCaseStudy: false
   href: https://qinship1.com
   image: touch-cr-logo.png
+- alt: Unsupervised
+  description: Unsupervised automatically analyzes your data and discovers your biggest problems and opportunities.
+  featured: false
+  hasCaseStudy: false
+  href: https://unsupervised.com
+  image: unsupervised-logo.png
